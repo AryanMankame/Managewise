@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import Carousel from 'react-grid-carousel'
+// import Carousel from 'react-grid-carousel'
+import Carousel from './Carousal';
+import './styles.css';
 function Comments() {
   return (
     <Page>
@@ -14,126 +16,30 @@ function Comments() {
             <div id="below">Discover why our clients love working with us. Read their</div>
             <div id="below-next">testimonials and learn how we has helped businesses.</div>
         </div>
-        <div className="carouel-div">
-            <Carousel containerClassName = "carousel-div" cols={4} rows={1} loop = {true} autoplay={1000}>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="alex.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="david.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="sarah.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="emily.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="sarah.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="alex.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="david.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="alex.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="david.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="alex.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="david.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="alex.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="david.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="emily.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="sarah.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="emily.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="sarah.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="david.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="sarah.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="emily.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="david.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="sarah.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <div className="comment">
-                        <img src="emily.png" alt="" />
-                    </div>
-                </Carousel.Item>
-                {/* ... */}
-            </Carousel>
+        <Carousel slides={[
+            <div className="carouel-div">
+                <div className="comment">
+                    <img src="alex.png" alt="" />
+                </div>
+                <div className="comment">
+                    <img src="david.png" alt="" />
+                </div>
+                <div className="comment">
+                    <img src="sarah.png" alt="" />
+                </div>
+            </div>,
+            <div className="carouel-div">
+            <div className="comment">
+                <img src="emily.png" alt="" />
+            </div>
+            <div className="comment">
+                <img src="alex.png" alt="" />
+            </div>
+            <div className="comment">
+                <img src="david.png" alt="" />
+            </div>
         </div>
+        ]} />
         
     </Page>
   )
@@ -195,10 +101,13 @@ overflow-x:hidden;
 .comment>img{
     height:100%;
 }
-.carousel-div{
+.carouel-div{
     width:85vw;
     margin-top:5vh;
     margin-left:3vw;
+    display:flex; flex-direction:row; gap:1vw;
+    align-items:center;
+    justify-content:center;
 }
 `;
 export default Comments
