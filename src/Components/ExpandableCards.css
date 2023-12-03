@@ -16,8 +16,9 @@
   }
   
   .expandable-card-title {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 700;
+    color: rgb(130, 71, 255);
   }
   
   .expandable-card-toggle {
