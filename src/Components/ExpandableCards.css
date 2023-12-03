@@ -1,0 +1,39 @@
+.expandable-card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 10px 0;
+    background-color: #EDEDFA;
+    width: 80%;
+    border-radius: 20px;
+  }
+  
+  .expandable-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 5px; */
+    padding-left: 30px;
+  }
+  
+  .expandable-card-title {
+    font-size: 25px;
+    font-weight: 700;
+  }
+  
+  .expandable-card-toggle {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    margin-right:4vw;
+  }
+  
+  .expandable-card-content {
+    padding: 10px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
